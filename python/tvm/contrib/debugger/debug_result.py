@@ -77,7 +77,8 @@ class DebugResult(object):
             node = self._nodes_list[i]
             input_list = []
             for input_node in node["inputs"]:
-                input_list.append(self._nodes_list[input_node[0]]["name"])
+                #input_list.append(self._nodes_list[input_node[0]]["name"])
+                input_list.append(input_node[0])
             node["inputs"] = input_list
             dtype = str("type: " + self._dtype_list[1][i])
             if "attrs" not in node:
